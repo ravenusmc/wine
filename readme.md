@@ -1,7 +1,9 @@
 # Wine
 ## Intro
 
+This project will be looking at wines throughout the world.
 
+https://www.kaggle.com/zynicide/wine-reviews
 
 # Getting started
 ### Installing
