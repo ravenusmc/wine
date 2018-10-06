@@ -1,7 +1,7 @@
 # Wine
 ## Intro
 
-This project will be looking at wines throughout the world.
+This project will be looking at wines throughout the world. This is a test.
 
 https://www.kaggle.com/zynicide/wine-reviews
 
@@ -33,6 +33,6 @@ website.
 
 # Preview
 
-To see a video that talks about this project please go here: 
+To see a video that talks about this project please go here:
 
 Blog entry:
