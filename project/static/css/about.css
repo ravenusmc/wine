@@ -24,6 +24,15 @@ CSS for section about me
 CSS on section about data projects.
 ************************/
 
+.data_sciene_projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3em;
+  border: 2px solid blue;
+  text-align: center;
+}
+
 
 /***********************
 Media Query Code
