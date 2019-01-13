@@ -1,7 +1,7 @@
 # Wine
 ## Intro
 
-This project will be looking at wines throughout the world. This is a test.
+This project will be looking at wines throughout the world.
 
 https://www.kaggle.com/zynicide/wine-reviews
 
@@ -19,7 +19,7 @@ https://www.kaggle.com/zynicide/wine-reviews
 2. Python-3.4
 3. Pandas-0.18.1
 4. Numpy-1.11.0
-5. MySQL-5.6.26
+5. Vue.JS-2
 
 ### Operation
 
@@ -33,6 +33,6 @@ website.
 
 # Preview
 
-To see a video that talks about this project please go here:
+To see a video that talks about this project please go here: COMING SOON
 
-Blog entry:
+Blog entry: COMING SOON
