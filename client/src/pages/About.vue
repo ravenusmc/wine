@@ -11,7 +11,7 @@
     <div class='about_content_area'>
 
       <div class='pic_div'>
-        <!-- <img src='../../assets/images/Cuddy.jpg'> -->
+        <img src='../assets/images/Cuddy.jpg'>
       </div>
 
       <div class='bio_div'>
