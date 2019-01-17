@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Hi</h1>
+    <header>
+      <h1>Learning About Wine</h1>
+    </header>
   </div>
 </template>
 
