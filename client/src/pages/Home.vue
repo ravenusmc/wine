@@ -1,15 +1,19 @@
 <template>
   <div>
-    <header>
-      <h1>Learning About Wine</h1>
-    </header>
+    <About_Header/>
   </div>
 </template>
 
 <script>
+import About_Header from '@/components/About/Header';
+
 export default {
   name: 'Home',
+  components: {
+    About_Header,
+  }
 };
+
 </script>
 
 <style scoped>
