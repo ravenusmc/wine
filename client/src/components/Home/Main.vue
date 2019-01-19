@@ -1,8 +1,69 @@
 <template>
-  <div class="md-layout md-gutter">
-    <div class="md-layout-item">asdasdd</div>
-    <div class="md-layout-item">adsdada</div>
-    <div class="md-layout-item">sdasdasd</div>
+  <div class='main_content'>
+
+    <div class="md-layout md-gutter md-alignment-center">
+
+      <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
+        <md-card md-with-hover>
+         <md-ripple>
+           <md-card-header>
+             <div class="md-title">Card with hover effect</div>
+             <div class="md-subhead">It also have a ripple</div>
+           </md-card-header>
+
+           <md-card-content>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+           </md-card-content>
+
+           <md-card-actions>
+             <md-button>Action</md-button>
+             <md-button>Action</md-button>
+           </md-card-actions>
+         </md-ripple>
+       </md-card>
+      </div>
+
+      <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
+        <md-card md-with-hover>
+         <md-ripple>
+           <md-card-header>
+             <div class="md-title">Card with hover effect</div>
+             <div class="md-subhead">It also have a ripple</div>
+           </md-card-header>
+
+           <md-card-content>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+           </md-card-content>
+
+           <md-card-actions>
+             <md-button>Action</md-button>
+             <md-button>Action</md-button>
+           </md-card-actions>
+         </md-ripple>
+       </md-card>
+      </div>
+
+      <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
+        <md-card md-with-hover>
+         <md-ripple>
+           <md-card-header>
+             <div class="md-title">Card with hover effect</div>
+             <div class="md-subhead">It also have a ripple</div>
+           </md-card-header>
+
+           <md-card-content>
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+           </md-card-content>
+
+           <md-card-actions>
+             <md-button>Action</md-button>
+             <md-button>Action</md-button>
+           </md-card-actions>
+         </md-ripple>
+       </md-card>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -14,8 +75,9 @@ export default {
 
 <style scoped>
 .md-layout-item {
-  height: 40px;
+  margin: 5px;
 }
+
 .md-layout-item:after {
   width: 100%;
   height: 100%;
@@ -23,4 +85,9 @@ export default {
   background: md-get-palette-color(red, 200);
   content: " ";
 }
+
+.main_content {
+  margin-top: 50px;
+}
+
 </style>
