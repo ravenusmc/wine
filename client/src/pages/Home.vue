@@ -1,17 +1,17 @@
 <template>
   <div>
-    <About_Header/>
+    <AboutHeader/>
   </div>
 </template>
 
 <script>
-import About_Header from '@/components/About/Header';
+import AboutHeader from '@/components/About/Header';
 
 export default {
   name: 'Home',
   components: {
-    About_Header,
-  }
+    AboutHeader,
+  },
 };
 
 </script>
