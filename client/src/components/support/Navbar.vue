@@ -13,6 +13,9 @@
               <router-link class="nav-link" to="/">Home</router-link>
             </li>
             <li class="nav-item">
+              <router-link class="nav-link" to="/fact">Fact</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" to="/world">World Map</router-link>
             </li>
             <li class="nav-item">

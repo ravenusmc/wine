@@ -5,8 +5,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'WorldMap',
+  computed: {
+    ...mapState({
+      name: state => state.name
+    })
+  }
 };
 </script>
 

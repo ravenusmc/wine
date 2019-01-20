@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from '@/pages/Home';
 import About from '@/pages/About';
 import WorldMap from '@/pages/World';
+import Fact from '@/pages/Fact';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/world',
       name: 'WorldMap',
       component: WorldMap,
+    },
+    {
+      path: '/fact',
+      name: 'Fact',
+      component: Fact,
     },
   ],
 });

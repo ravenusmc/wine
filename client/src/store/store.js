@@ -6,8 +6,13 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state: {
+    name: 'Mike and Abby',
   },
   getters: {
   },
+  mutations: {
+  },
+  actions: {
+  }
 
 });
