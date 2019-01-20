@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: 'WorldMap'
-}
+  name: 'WorldMap',
+};
 </script>
 
 <style scoped>

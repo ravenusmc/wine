@@ -12,7 +12,8 @@
            </md-card-header>
 
            <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
            </md-card-content>
 
            <md-card-actions>
@@ -32,7 +33,8 @@
            </md-card-header>
 
            <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+             Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
            </md-card-content>
 
            <md-card-actions>
@@ -52,7 +54,8 @@
            </md-card-header>
 
            <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
+             itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
            </md-card-content>
 
            <md-card-actions>
@@ -69,8 +72,8 @@
 
 <script>
 export default {
-  name: 'Main'
-}
+  name: 'Main',
+};
 </script>
 
 <style scoped>

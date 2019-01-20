@@ -21,7 +21,7 @@ export default new Router({
     {
       path: '/world',
       name: 'WorldMap',
-      component: WorldMap
+      component: WorldMap,
     },
   ],
 });
