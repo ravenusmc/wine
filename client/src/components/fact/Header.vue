@@ -1,7 +1,9 @@
 <template>
   <div>
     <header>
-      <h1>Hi</h1>
+      <div>
+        <h1>Analyzing the Data</h1>
+      </div>
     </header>
   </div>
 </template>
