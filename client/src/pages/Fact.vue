@@ -6,6 +6,7 @@
 
 <script>
 import Header from '@/components/fact/Header';
+
 export default {
   name: 'Fact',
   components: {
