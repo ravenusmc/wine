@@ -11,7 +11,11 @@
            </md-card-header>
 
            <md-card-content>
-             Country with highest scoring wine: 
+             Wines with a perfect rating:
+             <ul>
+               <li v-for='wine in highestRatedWines'><span>Country:</span> {{wine.Country }},
+                 <span>Winery:</span> {{wine.Winery}}, <span>Variety:</span> {{wine.Variety}}</li>
+             </ul>
            </md-card-content>
 
            <md-card-actions>
@@ -50,10 +54,25 @@
 </template>
 
 <script>
+import { mapState, mapActions, mapGetters } from 'vuex';
+
 export default {
   name: 'BasicInformation',
+  computed: {
+    ...mapGetters([
+      'name',
+      'highestRatedWines',
+    ])
+  },
+  mounted(){
+    this.$store.dispatch('getHighestRatedWine')
+  },
 };
 </script>
 
 <style scoped>
+
+span {
+  font-weight: bold;
+}
 </style>
