@@ -21,7 +21,7 @@ class Data():
         while count < len(self.data):
             #This dictionary will hold the wineries and variety's
             wine_information = {}
-            #setting the winery to the variety in the dictionary.
+            #setting the winery to the variety and country in the dictionary.
             wine_information['Winery'] = self.data.iloc[count,0]
             wine_information['Variety'] = self.data.iloc[count,1]
             wine_information['Country'] = self.data.iloc[count,2]
@@ -29,8 +29,15 @@ class Data():
             count += 1
         return wine_information_list
 
-data = Data()
-data.highest_rated_wine()
+    def get_average_wine_data(self):
+        mean = self.data["points"].mean()
+        #changing the format of the mean
+        mean = format(mean, '.2f')
+        return mean
+
+
+# data = Data()
+# data.get_basic_data()
 
 
 

@@ -33,7 +33,7 @@
            </md-card-header>
 
            <md-card-content>
-             <p>The average score of the wine: </p>
+             <p>The average score of the wine: {{ averageWineScore }}</p>
              <p>The lowest score of the wine: </p>
            </md-card-content>
 
@@ -60,10 +60,12 @@ export default {
     ...mapGetters([
       'name',
       'highestRatedWines',
+      'averageWineScore',
     ])
   },
   mounted(){
-    this.$store.dispatch('getHighestRatedWine')
+    this.$store.dispatch('getHighestRatedWine');
+    this.$store.dispatch('getAverageWineScore');
   },
 };
 </script>

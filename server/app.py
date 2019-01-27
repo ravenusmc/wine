@@ -24,8 +24,8 @@ def route_one():
 @app.route('/getBasicData', methods=['GET'])
 def route_two():
     data = Data()
-    wine_basic_data = data.getBasicData()
-    return jsonify(wine_basic_data)
+    wine_point_mean = data.get_average_wine_data()
+    return jsonify(wine_point_mean)
 
 
 if __name__ == '__main__':
