@@ -21,6 +21,12 @@ def route_one():
     wine_information_list = data.highest_rated_wine()
     return jsonify(wine_information_list)
 
+@app.route('/getBasicData', methods=['GET'])
+def route_two():
+    data = Data()
+    wine_basic_data = data.getBasicData()
+    return jsonify(wine_basic_data)
+
 
 if __name__ == '__main__':
     app.run()

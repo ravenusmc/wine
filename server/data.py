@@ -27,7 +27,6 @@ class Data():
             wine_information['Country'] = self.data.iloc[count,2]
             wine_information_list.append(wine_information)
             count += 1
-        #print(wine_information_list)
         return wine_information_list
 
 data = Data()

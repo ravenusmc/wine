@@ -1,17 +1,16 @@
 <template>
   <div>
 
-    <div class="md-layout md-gutter md-alignment-center">
+    <div class="margin_fix md-layout md-gutter md-alignment-center">
 
       <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
         <md-card md-with-hover>
          <md-ripple>
            <md-card-header>
-             <div class="md-title">Basic Information</div>
+             <div class="md-title">The Perfect Wine</div>
            </md-card-header>
 
            <md-card-content>
-             Wines with a perfect rating:
              <ul>
                <li v-for='wine in highestRatedWines'><span>Country:</span> {{wine.Country }},
                  <span>Winery:</span> {{wine.Winery}}, <span>Variety:</span> {{wine.Variety}}</li>
@@ -30,13 +29,12 @@
         <md-card md-with-hover>
          <md-ripple>
            <md-card-header>
-             <div class="md-title">Card with hover effect</div>
-             <div class="md-subhead">It also have a ripple</div>
+             <div class="md-title">Basic Facts</div>
            </md-card-header>
 
            <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-             Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+             <p>The average score of the wine: </p>
+             <p>The lowest score of the wine: </p>
            </md-card-content>
 
            <md-card-actions>
@@ -71,6 +69,12 @@ export default {
 </script>
 
 <style scoped>
+
+.margin_fix {
+  margin-top: 50px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
 span {
   font-weight: bold;
