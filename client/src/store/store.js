@@ -9,12 +9,14 @@ export const store = new Vuex.Store({
     highestRatedWines: [],
     averageWineScore: 0,
     lowestWineScore: 0,
+    standardDeviationPoints: 0,
   },
 
   getters: {
     highestRatedWines: state => state.highestRatedWines,
     averageWineScore: state => state.averageWineScore,
     lowestWineScore: state => state.lowestWineScore,
+    standardDeviationPoints: state => state.standardDeviationPoints,
   },
 
   actions: {
@@ -48,6 +50,16 @@ export const store = new Vuex.Store({
           console.log(error);
         });
     },
+    getStandardDeviation: ({ commit }) => {
+      const path = 'http://localhost:5000/getStandardDeviation';
+      axios.get(path)
+        .then((res) => {
+          commit('setStandardDeviationPoints', res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
 
   mutations: {
@@ -59,6 +71,9 @@ export const store = new Vuex.Store({
     },
     setLowestScore(state, data) {
       state.lowestWineScore = data;
+    },
+    setStandardDeviationPoints(state, data) {
+      state.standardDeviationPoints = data;
     },
   },
 });

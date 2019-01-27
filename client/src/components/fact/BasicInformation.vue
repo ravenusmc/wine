@@ -33,8 +33,9 @@
            </md-card-header>
 
            <md-card-content>
-             <p>The average score of the wine: {{ averageWineScore }}</p>
-             <p>The lowest score of the wine: {{ lowestWineScore }}</p>
+             <p><span>The average score of the wine:</span> {{ averageWineScore }}</p>
+             <p><span>The Standard Deviation of points:</span> {{ standardDeviationPoints }}</p>
+             <p><span>The lowest score of the wine:</span> {{ lowestWineScore }}</p>
              <p>Please note, the that wine data that I have does not have a value
                that's lower than 80.
             </p>
@@ -64,12 +65,14 @@ export default {
       'highestRatedWines',
       'averageWineScore',
       'lowestWineScore',
+      'standardDeviationPoints'
     ])
   },
   mounted(){
     this.$store.dispatch('getHighestRatedWine');
     this.$store.dispatch('getAverageWineScore');
     this.$store.dispatch('getLowestScore');
+    this.$store.dispatch('getStandardDeviation');
   },
 };
 </script>

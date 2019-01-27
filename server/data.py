@@ -41,9 +41,15 @@ class Data():
         lowest_score = self.data['points'].min()
         return lowest_score
 
+    #Getting the standard deviation of the wines
+    def wine_standard_deviation(self):
+        deviation = self.data["points"].std()
+        deviation = format(deviation, '.2f')
+        return deviation
 
-data = Data()
-data.get_lowest_score()
+
+# data = Data()
+# data.wine_standard_deviation()
 
 
 
