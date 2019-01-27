@@ -34,7 +34,10 @@
 
            <md-card-content>
              <p>The average score of the wine: {{ averageWineScore }}</p>
-             <p>The lowest score of the wine: </p>
+             <p>The lowest score of the wine: {{ lowestWineScore }}</p>
+             <p>Please note, the that wine data that I have does not have a value
+               that's lower than 80.
+            </p>
            </md-card-content>
 
            <md-card-actions>
@@ -58,14 +61,15 @@ export default {
   name: 'BasicInformation',
   computed: {
     ...mapGetters([
-      'name',
       'highestRatedWines',
       'averageWineScore',
+      'lowestWineScore',
     ])
   },
   mounted(){
     this.$store.dispatch('getHighestRatedWine');
     this.$store.dispatch('getAverageWineScore');
+    this.$store.dispatch('getLowestScore');
   },
 };
 </script>

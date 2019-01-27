@@ -8,11 +8,15 @@ export const store = new Vuex.Store({
   state: {
     highestRatedWines: [],
     averageWineScore: 0,
+    lowestWineScore: 0,
   },
+
   getters: {
     highestRatedWines: state => state.highestRatedWines,
     averageWineScore: state => state.averageWineScore,
+    lowestWineScore: state => state.lowestWineScore,
   },
+
   actions: {
     getHighestRatedWine: ({ commit }) => {
       const path = 'http://localhost:5000/highestRatedWine';
@@ -34,13 +38,27 @@ export const store = new Vuex.Store({
           console.log(error);
         });
     },
+    getLowestScore: ({ commit }) => {
+      const path = 'http://localhost:5000/getlowestscore';
+      axios.get(path)
+        .then((res) => {
+          commit('setLowestScore', res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
+
   mutations: {
     setHighestRatedWine(state, data) {
       state.highestRatedWines = data;
     },
-    setAverageWineScore(state, data){
+    setAverageWineScore(state, data) {
       state.averageWineScore = data;
-    }
+    },
+    setLowestScore(state, data) {
+      state.lowestWineScore = data;
+    },
   },
 });

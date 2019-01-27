@@ -27,6 +27,12 @@ def route_two():
     wine_point_mean = data.get_average_wine_data()
     return jsonify(wine_point_mean)
 
+@app.route('/getlowestscore', methods=['GET'])
+def route_three():
+    data = Data()
+    wine_point_lowest_score = int(data.get_lowest_score())
+    return jsonify(wine_point_lowest_score)
+
 
 if __name__ == '__main__':
     app.run()

@@ -29,15 +29,21 @@ class Data():
             count += 1
         return wine_information_list
 
+    #This method gets the mean of all the wine scores
     def get_average_wine_data(self):
         mean = self.data["points"].mean()
         #changing the format of the mean
         mean = format(mean, '.2f')
         return mean
 
+    #This method gets the lowest score value.
+    def get_lowest_score(self):
+        lowest_score = self.data['points'].min()
+        return lowest_score
 
-# data = Data()
-# data.get_basic_data()
+
+data = Data()
+data.get_lowest_score()
 
 
 
