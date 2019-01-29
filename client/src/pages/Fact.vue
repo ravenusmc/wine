@@ -2,6 +2,7 @@
   <div>
     <Header/>
     <BasicInformation/>
+    <hr>
   </div>
 </template>
 

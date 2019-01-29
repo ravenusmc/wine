@@ -33,11 +33,18 @@
            </md-card-header>
 
            <md-card-content>
-             <p><span>The average score of the wine:</span> {{ averageWineScore }}</p>
+             <p><span>The average score of the wines:</span> {{ averageWineScore }}</p>
              <p><span>The Standard Deviation of points:</span> {{ standardDeviationPoints }}</p>
-             <p><span>The lowest score of the wine:</span> {{ lowestWineScore }}</p>
+             <p><span>The highest score of the wines:</span> 100 </p>
+             <p><span>The lowest score of the wines:</span> {{ lowestWineScore }}</p>
+             <h5>Brief Summary</h5>
              <p>Please note, the that wine data that I have does not have a value
-               that's lower than 80.
+               that's lower than 80. I'm not really sure why this is but it could be that
+               below 80 points a wine may not be considered that good. I doubt that
+               since there are some cheap wines that I think are quite good. I will
+               also say that with the spread of only 20 points, how good being a
+               90 truly is. Is there an order of magnitude of difference between
+               an 80 to a 90 to a 100?
             </p>
            </md-card-content>
 
