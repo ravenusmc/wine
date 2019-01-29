@@ -1,5 +1,6 @@
 <template>
   <div>
+    <input v-model="message" placeholder="Please enter a country">
   </div>
 </template>
 
