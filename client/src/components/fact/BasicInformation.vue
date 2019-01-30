@@ -43,8 +43,7 @@
                below 80 points a wine may not be considered that good. I doubt that
                since there are some cheap wines that I think are quite good. I will
                also say that with the spread of only 20 points, how good being a
-               90 truly is. Is there an order of magnitude of difference between
-               an 80 to a 90 to a 100?
+               90 truly is.
             </p>
            </md-card-content>
 
@@ -76,6 +75,9 @@ export default {
     ])
   },
   mounted(){
+    // ...mapActions([
+    //   'getHighestRatedWine',
+    // ]),
     this.$store.dispatch('getHighestRatedWine');
     this.$store.dispatch('getAverageWineScore');
     this.$store.dispatch('getLowestScore');
