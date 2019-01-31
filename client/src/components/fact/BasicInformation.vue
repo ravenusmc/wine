@@ -62,7 +62,8 @@
 </template>
 
 <script>
-import { mapState, mapActions, mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
 
 export default {
   name: 'BasicInformation',
@@ -74,14 +75,19 @@ export default {
       'standardDeviationPoints'
     ])
   },
+  methods:{
+    ...mapActions([
+      'getHighestRatedWine',
+      'getAverageWineScore',
+      'getLowestScore',
+      'getStandardDeviation',
+    ])
+  },
   mounted(){
-    // ...mapActions([
-    //   'getHighestRatedWine',
-    // ]),
-    this.$store.dispatch('getHighestRatedWine');
-    this.$store.dispatch('getAverageWineScore');
-    this.$store.dispatch('getLowestScore');
-    this.$store.dispatch('getStandardDeviation');
+    this.getHighestRatedWine();
+    this.getAverageWineScore();
+    this.getLowestScore();
+    this.getStandardDeviation();
   },
 };
 </script>
