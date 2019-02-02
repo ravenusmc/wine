@@ -10,8 +10,8 @@ class Support():
     def __init__(self):
         self.data = pd.read_csv('./data/wine_one.csv')
 
-    def test(self):
-        print(self.data.head())
+    def get_unique_countries(self):
+        print(self.data.country.unique())
 
-support = Support()
-support.test()
+# support = Support()
+# support.get_unique_countries()
