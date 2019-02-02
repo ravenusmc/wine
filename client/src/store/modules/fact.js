@@ -3,31 +3,35 @@ import Vuex from 'vuex';
 import axios from 'axios';
 
 
-  const state = {
-    highestRatedWines: [],
-    averageWineScore: 0,
-    lowestWineScore: 0,
-    standardDeviationPoints: 0,
-  };
+const state = {
+  highestRatedWines: [],
+  averageWineScore: 0,
+  lowestWineScore: 0,
+  standardDeviationPoints: 0,
+  averageWineRatingCountry: 0,
+};
 
-  const getters = {
-    highestRatedWines: state => state.highestRatedWines,
-    averageWineScore: state => state.averageWineScore,
-    lowestWineScore: state => state.lowestWineScore,
-    standardDeviationPoints: state => state.standardDeviationPoints,
-  };
+const getters = {
+  highestRatedWines: state => state.highestRatedWines,
+  averageWineScore: state => state.averageWineScore,
+  lowestWineScore: state => state.lowestWineScore,
+  standardDeviationPoints: state => state.standardDeviationPoints,
+  averageWineRatingCountry: state => state.averageWineRatingCountry,
+};
 
 const actions = {
-    getHighestRatedWine: ({ commit }) => {
-      const path = 'http://localhost:5000/highestRatedWine';
-      axios.get(path)
-      .then((res) => {
-        commit('setHighestRatedWine', res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+
+  getHighestRatedWine: ({ commit }) => {
+    const path = 'http://localhost:5000/highestRatedWine';
+    axios.get(path)
+    .then((res) => {
+      commit('setHighestRatedWine', res.data);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
   },
+
   getAverageWineScore: ({ commit }) => {
     const path = 'http://localhost:5000/getBasicData';
     axios.get(path)
@@ -38,6 +42,7 @@ const actions = {
         console.log(error);
       });
   },
+
   getLowestScore: ({ commit }) => {
     const path = 'http://localhost:5000/getlowestscore';
     axios.get(path)
@@ -48,6 +53,7 @@ const actions = {
         console.log(error);
       });
   },
+
   getStandardDeviation: ({ commit }) => {
     const path = 'http://localhost:5000/getStandardDeviation';
     axios.get(path)
@@ -58,6 +64,22 @@ const actions = {
         console.log(error);
       });
     },
+
+    getAverageWineRatingCountry: ({ commit }, payload) => {
+      const countryObject = {
+        country: payload
+      };
+      const path = 'http://localhost:5000/countryWineInformation';
+      axios.post(path, countryObject)
+      .then((res) => {
+        this.msg = res.data;
+        console.log(this.msg)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      },
+
   };
 
 const mutations = {
@@ -73,6 +95,9 @@ const mutations = {
   setStandardDeviationPoints(state, data) {
     state.standardDeviationPoints = data;
   },
+  setAverageWineRatingCountry(state, date){
+    state.averageWineRatingCountry = data;
+  }
 };
 
 export default {

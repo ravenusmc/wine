@@ -2,18 +2,19 @@
   <div>
 
     <div class='input_area'>
-      <form @submit="submitCountry">
         <select v-model="country" name="country">
           <option v-for="country in countries" :value="country">{{country}}</option>
         </select>
-        <button type="submit" variant="primary">Submit</button>
-      </form>
+        <button @click="submitCountry" type="submit" variant="primary">Submit</button>
     </div>
 
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
+
 export default {
   name: 'CountrySection',
   data(){
@@ -26,13 +27,16 @@ export default {
           'Switzerland', 'Albania', 'Bosnia and Herzegovina', 'Brazil', 'Cyprus',
           'Lithuania', 'Japan', 'China', 'South Korea', 'Ukraine', 'England', 'Mexico',
           'Georgia', 'Montenegro', 'Luxembourg', 'Slovakia', 'Czech Republic', 'Egypt',
-          'Tunisia', 'US-France'],
+          'Tunisia'],
 
     }
   },
   methods: {
+    ...mapActions([
+      'getAverageWineRatingCountry',
+    ]),
     submitCountry() {
-      alert(this.country)
+      this.getAverageWineRatingCountry(this.country)
     }
   }
 };

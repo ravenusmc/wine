@@ -47,6 +47,14 @@ class Data():
         deviation = format(deviation, '.2f')
         return deviation
 
+    #Getting the average score of wine for the country the user selected
+    def wine_mean_country(self, country):
+        self.data = self.data[self.data['country'] == country]
+        mean = self.data["points"].mean()
+        mean = format(mean, '.2f')
+        return mean
+
+
 
 # data = Data()
 # data.wine_standard_deviation()

@@ -35,12 +35,22 @@ def route_three():
     wine_point_lowest_score = int(data.get_lowest_score())
     return jsonify(wine_point_lowest_score)
 
-#Getting the standard Deviation of points 
+#Getting the standard Deviation of points
 @app.route('/getStandardDeviation', methods=['GET'])
 def route_four():
     data = Data()
     wine_Point_STD = data.wine_standard_deviation()
     return jsonify(wine_Point_STD)
+
+#This route will handle the information for the country section
+@app.route('/countryWineInformation', methods=['GET', 'POST'])
+def route_five():
+    data = Data()
+    if request.method == 'POST':
+        post_data = request.get_json()
+        country = post_data.get('country')
+        mean = data.wine_mean_country(country)
+        return jsonify(3)
 
 
 if __name__ == '__main__':
