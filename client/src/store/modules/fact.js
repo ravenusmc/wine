@@ -72,8 +72,7 @@ const actions = {
       const path = 'http://localhost:5000/countryWineInformation';
       axios.post(path, countryObject)
       .then((res) => {
-        this.msg = res.data;
-        console.log(this.msg)
+        commit('setAverageWineRatingCountry', res.data)
       })
       .catch((error) => {
         console.log(error);
@@ -95,7 +94,7 @@ const mutations = {
   setStandardDeviationPoints(state, data) {
     state.standardDeviationPoints = data;
   },
-  setAverageWineRatingCountry(state, date){
+  setAverageWineRatingCountry(state, data){
     state.averageWineRatingCountry = data;
   }
 };

@@ -50,7 +50,7 @@ def route_five():
         post_data = request.get_json()
         country = post_data.get('country')
         mean = data.wine_mean_country(country)
-        return jsonify(3)
+        return jsonify(mean)
 
 
 if __name__ == '__main__':

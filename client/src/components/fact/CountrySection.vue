@@ -1,12 +1,25 @@
 <template>
   <div>
 
+    <h1 class='center'>Get Wine Facts by Country</h1>
+
     <div class='input_area'>
         <select v-model="country" name="country">
           <option v-for="country in countries" :value="country">{{country}}</option>
         </select>
         <button @click="submitCountry" type="submit" variant="primary">Submit</button>
     </div>
+
+    <!-- This area will show the results -->
+    <div v-if='showResults'>
+
+      <div>
+        <h3>The Results</h3>
+        <p>The mean wine points is: {{ averageWineRatingCountry }}</p>
+      </div>
+
+    </div>
+    <!-- End of showing results area -->
 
   </div>
 </template>
@@ -28,21 +41,32 @@ export default {
           'Lithuania', 'Japan', 'China', 'South Korea', 'Ukraine', 'England', 'Mexico',
           'Georgia', 'Montenegro', 'Luxembourg', 'Slovakia', 'Czech Republic', 'Egypt',
           'Tunisia'],
+      showResults: false
 
     }
+  },
+  computed: {
+    ...mapGetters([
+      'averageWineRatingCountry'
+    ])
   },
   methods: {
     ...mapActions([
       'getAverageWineRatingCountry',
     ]),
     submitCountry() {
-      this.getAverageWineRatingCountry(this.country)
+      this.getAverageWineRatingCountry(this.country);
+      this.showResults = true;
     }
   }
 };
 </script>
 
 <style scoped>
+.center {
+  text-align: center;
+}
+
 .input_area {
   display: flex;
   flex-direction: column;
