@@ -52,6 +52,16 @@ def route_five():
         mean = data.wine_mean_country(country)
         return jsonify(mean)
 
+#This route will handle getting the top five wines for the country section
+@app.route('/countryTopFive', methods=['GET', 'POST'])
+def route_six():
+    data = Data()
+    if request.method == 'POST':
+        post_data = request.get_json()
+        country = post_data.get('country')
+        top_five_list = data.top_five_wines_country(country)
+        return jsonify(top_five_list)
+
 
 if __name__ == '__main__':
     app.run()

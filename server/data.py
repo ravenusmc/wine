@@ -54,10 +54,26 @@ class Data():
         mean = format(mean, '.2f')
         return mean
 
+    #Getting the top five wines by country
+    def top_five_wines_country(self, country):
+        top_five_list = []
+        count = 0
+        self.data = self.data[self.data['country'] == country]
+        self.data.sort_values('points', inplace = True, ascending=False)
+        self.data = self.data[['variety', 'winery', 'points']]
+        while count < len(self.data.head()):
+            #This dictionary will hold the wineries and variety's
+            wine_information = {}
+            wine_information['variety'] = self.data.iloc[count, 0]
+            wine_information['winery'] = self.data.iloc[count, 1]
+            wine_information['points'] = int(self.data.iloc[count, 2])
+            top_five_list.append(wine_information)
+            count += 1
+        return top_five_list
 
 
 # data = Data()
-# data.wine_standard_deviation()
+# data.top_five_wines_country()
 
 
 

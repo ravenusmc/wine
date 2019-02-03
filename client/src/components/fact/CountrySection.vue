@@ -18,6 +18,14 @@
         <p>The mean wine points is: {{ averageWineRatingCountry }}</p>
       </div>
 
+      <div>
+        <h5>Top Five Wineries and wine type in country</h5>
+        <ul>
+          <li v-for='wine in TopFiveByCountry'><span>Points:</span> {{wine.points }},
+            <span>Winery:</span> {{wine.winery}}, <span>Variety:</span> {{wine.variety}}</li>
+        </ul>
+      </div>
+
     </div>
     <!-- End of showing results area -->
 
@@ -47,12 +55,12 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'averageWineRatingCountry'
+      'averageWineRatingCountry',
+      'TopFiveByCountry',
     ])
   },
   methods: {
     ...mapActions([
-      'getAverageWineRatingCountry',
       'getCountryInformation',
     ]),
     submitCountry() {
@@ -66,6 +74,10 @@ export default {
 <style scoped>
 .center {
   text-align: center;
+}
+
+span {
+  font-weight: bold;
 }
 
 .input_area {

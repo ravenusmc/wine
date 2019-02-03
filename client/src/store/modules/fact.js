@@ -68,10 +68,11 @@ const actions = {
     },
 
     getCountryInformation: ({ commit, dispatch}, payload) => {
-      dispatch('getAverageWineRatingCountry', payload)
+      dispatch('fetchAverageWineRatingCountry', payload);
+      dispatch('fetchTopFiveWinesByCountry', payload);
     },
 
-    getAverageWineRatingCountry: ({ commit }, payload) => {
+    fetchAverageWineRatingCountry: ({ commit }, payload) => {
       const countryObject = {
         country: payload
       };
@@ -85,7 +86,7 @@ const actions = {
       });
     },
 
-    getTopFiveWinesByCountry: ({ commit }, payload) => {
+    fetchTopFiveWinesByCountry: ({ commit }, payload) => {
       const countryObject = {
         country: payload
       };
