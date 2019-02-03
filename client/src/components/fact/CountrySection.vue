@@ -53,9 +53,10 @@ export default {
   methods: {
     ...mapActions([
       'getAverageWineRatingCountry',
+      'getCountryInformation',
     ]),
     submitCountry() {
-      this.getAverageWineRatingCountry(this.country);
+      this.getCountryInformation(this.country);
       this.showResults = true;
     }
   }

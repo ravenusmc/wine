@@ -9,6 +9,7 @@ const state = {
   lowestWineScore: 0,
   standardDeviationPoints: 0,
   averageWineRatingCountry: 0,
+  TopFiveByCountry: [],
 };
 
 const getters = {
@@ -17,6 +18,7 @@ const getters = {
   lowestWineScore: state => state.lowestWineScore,
   standardDeviationPoints: state => state.standardDeviationPoints,
   averageWineRatingCountry: state => state.averageWineRatingCountry,
+  TopFiveByCountry: state => state.TopFiveByCountry,
 };
 
 const actions = {
@@ -65,6 +67,10 @@ const actions = {
       });
     },
 
+    getCountryInformation: ({ commit, dispatch}, payload) => {
+      dispatch('getAverageWineRatingCountry', payload)
+    },
+
     getAverageWineRatingCountry: ({ commit }, payload) => {
       const countryObject = {
         country: payload
@@ -77,7 +83,21 @@ const actions = {
       .catch((error) => {
         console.log(error);
       });
-      },
+    },
+
+    getTopFiveWinesByCountry: ({ commit }, payload) => {
+      const countryObject = {
+        country: payload
+      };
+      const path = 'http://localhost:5000/countryTopFive';
+      axios.post(path, countryObject)
+      .then((res) => {
+        commit('setTopFiveByCountry', res.data)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    },
 
   };
 
@@ -96,6 +116,9 @@ const mutations = {
   },
   setAverageWineRatingCountry(state, data){
     state.averageWineRatingCountry = data;
+  },
+  setTopFiveByCountry(state, data){
+    state.TopFiveByCountry = data;
   }
 };
 
