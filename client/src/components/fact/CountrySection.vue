@@ -11,10 +11,10 @@
     </div>
 
     <!-- This area will show the results -->
-    <div v-if='showResults'>
+    <div class='results_area' v-if='showResults'>
 
       <div>
-        <h3>The Results</h3>
+        <h3>The Results:</h3>
         <p>The mean wine points is: {{ averageWineRatingCountry }}</p>
       </div>
 
@@ -72,6 +72,7 @@ export default {
 </script>
 
 <style scoped>
+
 .center {
   text-align: center;
 }
@@ -85,5 +86,12 @@ span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.results_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 </style>
