@@ -4,10 +4,10 @@
     <h1 class='center'>Get Wine Facts by Country</h1>
 
     <div class='input_area'>
-        <select v-model="country" name="country">
+        <select @click='hide' v-model="country" name="country">
           <option v-for="country in countries" :value="country">{{country}}</option>
         </select>
-        <button @click="submitCountry" type="submit" variant="primary">Submit</button>
+        <md-button @click="submitCountry" type="submit" variant="primary" class="md-raised md-primary">Primary</md-button>
     </div>
 
     <!-- This area will show the results -->
@@ -19,7 +19,7 @@
       </div>
 
       <div>
-        <h5>Top Five Wineries and wine type in country</h5>
+        <h5>Top Five Wineries and wine type in {{ country }}</h5>
         <ul>
           <li v-for='wine in TopFiveByCountry'><span>Points:</span> {{wine.points }},
             <span>Winery:</span> {{wine.winery}}, <span>Variety:</span> {{wine.variety}}</li>
@@ -66,6 +66,9 @@ export default {
     submitCountry() {
       this.getCountryInformation(this.country);
       this.showResults = true;
+    },
+    hide() {
+      this.showResults = false;
     }
   }
 };

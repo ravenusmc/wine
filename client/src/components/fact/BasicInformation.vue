@@ -7,7 +7,7 @@
         <md-card md-with-hover>
          <md-ripple>
            <md-card-header>
-             <div class="md-title">The Perfect Wine</div>
+             <div class="md-title">The Best Wines</div>
            </md-card-header>
 
            <md-card-content>
