@@ -1,19 +1,20 @@
 <template>
   <div>
-    <h1>World Map</h1>
+    <World/>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
+import World from '@/components/world/Header';
 
 export default {
   name: 'WorldMap',
+  components: {
+    World,
+  },
   computed: {
-    ...mapState({
-      name: state => state.name
-    })
-  }
+  },
 };
 </script>
 

@@ -17,10 +17,6 @@
              </ul>
            </md-card-content>
 
-           <md-card-actions>
-             <md-button>Action</md-button>
-             <md-button>Action</md-button>
-           </md-card-actions>
          </md-ripple>
        </md-card>
       </div>
@@ -46,11 +42,6 @@
                90 truly is.
             </p>
            </md-card-content>
-
-           <md-card-actions>
-             <md-button>Action</md-button>
-             <md-button>Action</md-button>
-           </md-card-actions>
          </md-ripple>
        </md-card>
       </div>
