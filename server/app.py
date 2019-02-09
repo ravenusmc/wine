@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 #importing files I wrote
 from data import *
+from map import *
 
 # configuration
 DEBUG = True
@@ -62,6 +63,15 @@ def route_six():
         top_five_list = data.top_five_wines_country(country)
         return jsonify(top_five_list)
 
+#This route will handle getting data to build the world map
+@app.route('/worldMapData', methods=['GET', 'POST'])
+def route_seven():
+    map = Map()
+    if request.method == 'POST':
+        post_data = request.get_json()
+        variety = post_data.get('variety')
+        wine_data = map.get_wine_data(variety)
+        return jsonify(wine_data)
 
 if __name__ == '__main__':
     app.run()

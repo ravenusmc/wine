@@ -3,6 +3,7 @@
 import 'vue-material/dist/vue-material.min.css';
 import VueMaterial from 'vue-material';
 import VueGoogleCharts from 'vue-google-charts';
+import VueCharts from 'vue-charts';
 import axios from 'axios';
 import Vue from 'vue';
 import App from './App';
@@ -12,6 +13,7 @@ import { store } from './store/store';
 Vue.config.productionTip = false;
 
 Vue.use(VueMaterial);
+Vue.use(VueCharts);
 Vue.use(VueGoogleCharts);
 Vue.use(axios);
 
