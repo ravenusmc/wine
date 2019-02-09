@@ -1,6 +1,6 @@
 <template>
   <div>
-    <World/>
+    <World @wine-variety="wineVariety"/>
   </div>
 </template>
 
@@ -13,8 +13,18 @@ export default {
   components: {
     World,
   },
+  data() {
+    return {
+      variety: '',
+    }
+  },
   computed: {
   },
+  methods: {
+    wineVariety(e){
+      this.variety = e;
+    }
+  }
 };
 </script>
 

@@ -6,10 +6,11 @@
     </header>
 
     <div class='input_area'>
-        <select @click='hide' v-model="variety" name="country">
+      <h4>Please Select a Wine Variety</h4>
+        <select v-model="variety" name="country">
           <option v-for="variety in varieties" :value="variety">{{ variety }}</option>
         </select>
-        <md-button @click="submitCountry" type="submit" variant="primary"
+        <md-button @click="selectedVariety(variety)" type="submit" variant="primary"
         class="md-raised md-primary">Primary</md-button>
     </div>
 
@@ -28,7 +29,13 @@ export default {
        'Cabernet Sauvignon-Merlot', 'Pinot Bianco', 'Malbec-Cabernet Sauvignon',
        'Cabernet Sauvignon-Malbec','Cabernet Merlot','Merlot-Cabernet',
        'Malbec-Syrah','Johannisberg Riesling','Chardonnay-Pinot Grigio' ],
+       variety: '',
     }
+  },
+  methods: {
+    selectedVariety(variety) {
+      this.$emit('wine-variety', variety)
+    },
   }
 }
 </script>
@@ -37,5 +44,12 @@ export default {
 header {
   text-align: center;
   margin-top: 50px;
+}
+
+.input_area {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
