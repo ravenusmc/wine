@@ -17,4 +17,4 @@ class Support():
         print(self.data.variety.unique())
 
 # support = Support()
-# support.get_unique_countries()
+# support.get_unique_variety()
