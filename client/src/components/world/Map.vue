@@ -1,22 +1,25 @@
 <template>
   <div>
-    <h1>MAP</h1>
-    {{ variety }}
-
-    <!-- World Map -->
-    <div class='map_div'>
-      <vue-chart
-      chart-type="GeoChart"
-      :columns="columns"
-      :rows="rows"
-      :options="options"></vue-chart>
+    <hr>
+    <div class='world_map_area'>
+      <!-- World Map -->
+      <div class='map_div'>
+        <vue-chart
+        chart-type="GeoChart"
+        :columns="columns"
+        :rows="wineData"
+        :options="options"></vue-chart>
+      </div>
+      <!-- World Map -->
     </div>
-    <!-- World Map -->
 
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Map',
   props: {
@@ -24,7 +27,7 @@ export default {
       type: String,
       required: false
     },
-  },
+  }, //End of Props
   data() {
     return {
         columns: [{
@@ -42,8 +45,24 @@ export default {
         }
     }
   }, //End of data object.
+  computed: {
+    ...mapGetters([
+      'wineData',
+    ])
+  },
+  methods: {
+    ...mapActions([
+      'fetchWineData',
+    ]),
+  }, //End of methods
 }
 </script>
 
 <style scoped>
+.world_map_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>

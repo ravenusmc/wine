@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Header',
   data(){
@@ -33,8 +35,12 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'fetchWineData',
+    ]),
     selectedVariety(variety) {
       this.$emit('wine-variety', variety)
+      this.fetchWineData(variety);
     },
   }
 }
