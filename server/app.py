@@ -70,8 +70,9 @@ def route_seven():
     if request.method == 'POST':
         post_data = request.get_json()
         variety = post_data.get('variety')
-        wine_data = map.get_wine_data(variety)
-        return jsonify(wine_data)
+        wineData = map.get_wine_data(variety)
+        print(type(wineData))
+        return jsonify(wineData)
 
 if __name__ == '__main__':
     app.run()

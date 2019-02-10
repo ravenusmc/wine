@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import axios from 'axios';
+import jsonp from 'jsonp';
 
 const state = {
   wineData: [],
@@ -17,14 +18,16 @@ const actions = {
       variety: payload
     };
     const path = 'http://localhost:5000/worldMapData';
+
     axios.post(path, varietyObject)
     .then((res) => {
       commit('setWineData', res.data)
-      console.log(res.data)
+      alert('Response Back')
     })
     .catch((error) => {
       console.log(error);
     });
+
   }
 
 };

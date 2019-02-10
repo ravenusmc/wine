@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import { mapActions } from 'vuex';
 
 export default {
@@ -32,17 +33,35 @@ export default {
        'Cabernet Sauvignon-Malbec','Cabernet Merlot','Merlot-Cabernet',
        'Malbec-Syrah','Johannisberg Riesling','Chardonnay-Pinot Grigio' ],
        variety: '',
+       rows: [],
     }
+  },
+  computed: {
+    ...mapGetters([
+      'wineData',
+    ]),
   },
   methods: {
     ...mapActions([
       'fetchWineData',
     ]),
     selectedVariety(variety) {
-      this.$emit('wine-variety', variety)
+
       this.fetchWineData(variety);
+      this.rows = this.wineData,
+      this.$emit('wine-rows', this.rows)
+
+      // const promise1 = new Promise((resolve, reject) => {
+      //   this.fetchWineData(variety);
+      // })
+      // promise1.then(
+      //   this.rows = this.wineData,
+      //   // console.log(typeof this.rows),
+      //   // console.log(this.rows),
+      //   this.$emit('wine-rows', this.rows)
+      // )
     },
-  }
+  }//End of Methods
 }
 </script>
 

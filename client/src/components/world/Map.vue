@@ -7,7 +7,7 @@
         <vue-chart
         chart-type="GeoChart"
         :columns="columns"
-        :rows="wineData"
+        :rows="rows"
         :options="options"></vue-chart>
       </div>
       <!-- World Map -->
@@ -27,6 +27,10 @@ export default {
       type: String,
       required: false
     },
+    rows: {
+      type: Array,
+      required: false
+    }
   }, //End of Props
   data() {
     return {
@@ -37,24 +41,14 @@ export default {
             'type': 'number',
             'label': 'Average Score'
         }],
-        rows: [],
+        //rows: [[ "Spain", 84.55 ], [ "France", 87.46 ], [ "Italy", 85.86 ]],
         options: {
             title: 'Score of Wine',
-            width: 900,
+            width: 800,
             height: 500,
         }
     }
   }, //End of data object.
-  computed: {
-    ...mapGetters([
-      'wineData',
-    ])
-  },
-  methods: {
-    ...mapActions([
-      'fetchWineData',
-    ]),
-  }, //End of methods
 }
 </script>
 
