@@ -1,25 +1,20 @@
 <template>
   <div class='main_content'>
 
-    <div class="md-layout md-gutter md-alignment-center">
+    <div class="test md-layout md-gutter md-alignment-center">
 
       <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
         <md-card md-with-hover>
          <md-ripple>
            <md-card-header>
-             <div class="md-title">Card with hover effect</div>
-             <div class="md-subhead">It also have a ripple</div>
+             <div class="md-title">Fact Page</div>
            </md-card-header>
 
            <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-             Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+             Examine the data by looking at some of the basic facts about the
+             wines.
            </md-card-content>
 
-           <md-card-actions>
-             <md-button>Action</md-button>
-             <md-button>Action</md-button>
-           </md-card-actions>
          </md-ripple>
        </md-card>
       </div>
@@ -28,40 +23,14 @@
         <md-card md-with-hover>
          <md-ripple>
            <md-card-header>
-             <div class="md-title">Card with hover effect</div>
-             <div class="md-subhead">It also have a ripple</div>
+             <div class="md-title">World Map</div>
            </md-card-header>
 
            <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-             Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+            Look at a world map examining which wine variety is the best in each
+            country.
            </md-card-content>
 
-           <md-card-actions>
-             <md-button>Action</md-button>
-             <md-button>Action</md-button>
-           </md-card-actions>
-         </md-ripple>
-       </md-card>
-      </div>
-
-      <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
-        <md-card md-with-hover>
-         <md-ripple>
-           <md-card-header>
-             <div class="md-title">Card with hover effect</div>
-             <div class="md-subhead">It also have a ripple</div>
-           </md-card-header>
-
-           <md-card-content>
-             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-             itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
-           </md-card-content>
-
-           <md-card-actions>
-             <md-button>Action</md-button>
-             <md-button>Action</md-button>
-           </md-card-actions>
          </md-ripple>
        </md-card>
       </div>
@@ -79,6 +48,10 @@ export default {
 <style scoped>
 .md-layout-item {
   margin: 5px;
+}
+
+.test {
+  margin: 50px;
 }
 
 .md-layout-item:after {

@@ -18,7 +18,6 @@ const actions = {
       variety: payload
     };
     const path = 'http://localhost:5000/worldMapData';
-
     axios.post(path, varietyObject)
     .then((res) => {
       commit('setWineData', res.data)
@@ -27,7 +26,6 @@ const actions = {
     .catch((error) => {
       console.log(error);
     });
-
   }
 
 };
