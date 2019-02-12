@@ -1,11 +1,13 @@
 <template>
   <div>
+    <!-- Start of header -->
     <header>
       <div class='header_div'>
         <h1 class='center'>Learning About Wine</h1>
         <h1 class='center'>Through Data</h1>
       </div>
     </header>
+    <!-- End  of Header -->
   </div>
 </template>
 

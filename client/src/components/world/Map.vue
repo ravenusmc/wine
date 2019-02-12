@@ -2,7 +2,7 @@
   <div>
     <hr>
     <div class='world_map_area'>
-      <!-- World Map -->
+      <!-- Start of World Map -->
       <div class='map_div'>
         <vue-chart
         chart-type="GeoChart"
@@ -10,7 +10,7 @@
         :rows="rows"
         :options="options"></vue-chart>
       </div>
-      <!-- World Map -->
+      <!-- End of World Map -->
     </div>
 
   </div>
@@ -41,7 +41,6 @@ export default {
             'type': 'number',
             'label': 'Average Score'
         }],
-        //rows: [[ "Spain", 84.55 ], [ "France", 87.46 ], [ "Italy", 85.86 ]],
         options: {
             title: 'Score of Wine',
             width: 800,

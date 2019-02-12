@@ -21,7 +21,6 @@ const actions = {
     axios.post(path, varietyObject)
     .then((res) => {
       commit('setWineData', res.data)
-      alert('Response Back')
     })
     .catch((error) => {
       console.log(error);

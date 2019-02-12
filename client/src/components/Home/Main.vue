@@ -2,7 +2,7 @@
   <div class='main_content'>
 
     <div class="test md-layout md-gutter md-alignment-center">
-
+      <!-- Google card -->
       <div class="md-layout-item md-medium-size-33 md-small-size-50 md-xsmall-size-100">
         <md-card md-with-hover>
          <md-ripple>
@@ -34,6 +34,7 @@
          </md-ripple>
        </md-card>
       </div>
+      <!-- End of Google card -->
 
     </div>
   </div>
