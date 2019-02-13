@@ -71,7 +71,6 @@ def route_seven():
         post_data = request.get_json()
         variety = post_data.get('variety')
         wineData = map.get_wine_data(variety)
-        print(type(wineData))
         return jsonify(wineData)
 
 if __name__ == '__main__':

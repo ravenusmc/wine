@@ -5,6 +5,13 @@ This project will be looking at wines throughout the world.
 
 https://www.kaggle.com/zynicide/wine-reviews
 
+I originally intended to use Flask's blueprints on this project when I started it
+in the Fall of 2018. However, I got busy with my classes and work and the project
+was put on hold. When I came back to it, I ripped it apart and made it a project
+using Vue. It's much smaller than I intended but I also have to say that I got a
+little bored with the project. Saying that, I'm still fairly happy with how it
+turned out. I also used Vuex throughout all of it so that's good news!
+
 # Getting started
 ### Installing
 
@@ -29,7 +36,7 @@ website.
 
 # Issues / Other
 
-
+None at this time.
 
 # Preview
 
